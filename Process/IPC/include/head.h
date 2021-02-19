@@ -14,11 +14,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <mqueue.h>
+#include <pthread.h>
 
 #define FILE_MODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)
 
 #define MAXLEN 80
 
-
+#define min(a, b) ((a) < (b) ? (a) : (b)) 
 
 const char* mq_name = "/mqwyh.1";
