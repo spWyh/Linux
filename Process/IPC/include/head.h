@@ -15,6 +15,9 @@
 #include <sys/wait.h>
 #include <mqueue.h>
 #include <pthread.h>
+#include <semaphore.h>
+#include <sys/mman.h>
+
 
 #define FILE_MODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)
 
@@ -23,3 +26,4 @@
 #define min(a, b) ((a) < (b) ? (a) : (b)) 
 
 const char* mq_name = "/mqwyh.1";
+const char* shm_name = "wyh_shm";
